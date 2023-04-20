@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DynaPuff&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Tabu.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada</title>
+
+    <script>
+        
+        function gerarTabuada() {
+            var numero = parseInt(document.getElementById('numero').value)
+            var tabela = document.getElementById('tabela-tabuada');
+
+            tabela.innerHTML = ""; //limpar a tabela antes de gerar a outra//
+
+            //gerar tabudada//
+
+            for (var i = 1; i <= 10; i++) {
+                var resultado = numero * i;
+                var linha = "<tr><td>" + numero + " X " + i + "</td><td>"
+                    + resultado + "</td></tr>";
+
+
+                tabela.innerHTML += linha
+            }
+            
+        }
+
+
+    </script>
+</head>
+<body>
+
+   <header> 
+   <h1> Colégio Estadual UniDec </h1> 
+      <button id="toggle-mode"> Ensino Médio</button>
+</header> 
+
+      <ul>
+            <a href=" "> Lista de Alunos</a> 
+            <a href=" "> Contador </a> 
+            <a href=" "> Tabuada </a> 
+       </ul>
+      
+
+   <h1> Plataforma de Estudos<h1>
+
+     
+   
+ 
+<div>
+    
+    <h2>Tabuada Online</h2>
+    <p>Digite com o valor para entrar aqui</p>
+
+    <input type="text" name="#" id="numero">
+    <button onclick="gerarTabuada()">Gerar Tabela</button>
+    <table id="tabela-tabuada"></table>
+
+</div>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+ <footer> <a href="https://www.linkedin.com/in/alexandra-padilha-86a1b0270/ "><p id="foti">created by desingner Full Stack akey alee </p> </a> </footer>
+    <script src="main2.js"></script>
+
+   
+</body> 
+</html>
